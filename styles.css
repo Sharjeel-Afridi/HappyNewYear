@@ -3,11 +3,41 @@
 body{
     box-sizing: border-box;
     font-family: 'Montserrat';
-    background: #003366;
-    color: #F0F0F1;
+    background: #07195c;
+    color: #000;
     margin: 0;
     padding: 0;
 }
+.quadrant {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: -10;
+  }
+  
+  .quadrant-1 {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top left, #8985e9, #ffffff);
+  }
+  
+  .quadrant-2 {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to top right, #8985e9, #ffffff);
+  }
+  
+  .quadrant-3 {
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom left, #8985e9, #ffffff);
+  }
+  
+  .quadrant-4 {
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom right, #8985e9, #ffffff);
+  }
 .container{
     height: 100vh;
     width: calc(100vw-8px);
@@ -33,6 +63,7 @@ body{
     border-bottom: 1px solid black;
     background: #003366;
     border-radius: 10px 10px 0 0 ;
+    color: white;
 }
 .nav h2{
     font-size: 18px;
@@ -81,7 +112,7 @@ body{
 }
 .second input::placeholder{
     padding-left: 10px;
-    color:  rgba(225, 225, 225, 0.5);
+    color:  rgba(0, 0, 0, 0.5);
 
 }
 .second input:focus-visible{
