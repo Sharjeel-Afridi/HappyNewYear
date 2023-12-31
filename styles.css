@@ -62,7 +62,7 @@ body{
     justify-content: space-between;
     border-bottom: 1px solid black;
     background: #003366;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     color: white;
 }
 .nav h2{
@@ -107,7 +107,7 @@ body{
     height: 54px;
     width: 68%;
     border-radius: 10px;
-    color: #F0F0F1;
+    color: #000;
     font-size: 1.2rem;
 }
 .second input::placeholder{
@@ -206,4 +206,29 @@ body{
   /* Track */
   ::-webkit-scrollbar-track {
     background: #3d3b3b;
+  }
+
+@media screen and (max-width:600px) {
+    
+    .nav-left h2{
+        font-size: 0.8rem;
+    }
+    .nav-right{
+        gap: 10px;
+    }
+    .nav-right a{
+        font-size: 0.7rem;
+    }
+    .second .content h1{
+        font-size: 2rem;
+    }
+
+    .button-6{
+        font-size: 1rem;
+        min-height: 0;
+    }
+    .second input{
+        font-size: 1rem;
+        
+    }
   }

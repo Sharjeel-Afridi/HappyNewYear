@@ -4,7 +4,11 @@ const imagediv = document.getElementById('image');
 const wishContainer = document.getElementById('wishContainer');
 
 
-
+input.addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    submitbtn.click();
+  }
+});
 submitbtn.addEventListener('click', async () => {
   const username = input.value;
   wishContainer.classList.add('show');
@@ -16,7 +20,7 @@ submitbtn.addEventListener('click', async () => {
     localStorage.setItem('image', image);
     const wishApiResponce = await fetch("https://api.quotable.io/random?tags=Love").then((resp)=>{return resp.json()}).then(data => {return data});
     const wishText = wishApiResponce.content;
-    
+    wishContainer.scrollIntoView({ behavior: 'smooth' });
     generateWish(image, wishText);
   }
 });
